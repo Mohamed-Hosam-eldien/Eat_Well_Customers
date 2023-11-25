@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Eat Well</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="categories">Categories</string>
+    <string name="my_orders">Orders</string>
+    <string name="profile">Profile</string>
+    <string name="what_are_you_looking_for">What are you looking for?</string>
+    <string name="popular">Popular</string>
+    <string name="see_all">see all</string>
+    <string name="shortcuts">Shortcuts</string>
+    <string name="drink">Drinks</string>
+    <string name="pizza">Pizza</string>
+    <string name="burger">Burger</string>
+    <string name="tallerken">Tallerken</string>
+    <string name="dessert">Dessert</string>
+    <string name="reserve">Reserve</string>
+    <string name="full_name">Full Name</string>
+
+    <string name="create_an_account">create an account</string>
+    <string name="log_in">Log In</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+</resources>

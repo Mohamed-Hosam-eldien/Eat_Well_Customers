@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/menu_home">
+
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.codingtester.eatwell.view.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/menu_category"
+        android:name="com.codingtester.eatwell.view.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/menu_account"
+        android:name="com.codingtester.eatwell.view.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/menu_reserve"
+        android:name="com.codingtester.eatwell.view.reserve.ReserveFragment"
+        android:label="fragment_reserve"
+        tools:layout="@layout/fragment_reserve" />
+    <fragment
+        android:id="@+id/menu_order"
+        android:name="com.codingtester.eatwell.view.orders.MyOrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+</navigation>

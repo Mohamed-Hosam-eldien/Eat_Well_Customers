@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:padding="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit Card Details"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/txt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/gray"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="18dp"
+        android:hint="Card Number"
+        app:boxBackgroundColor="#EBEBFF"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="@color/dark_orange"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutYear"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="18dp"
+        android:hint="Year"
+        app:boxBackgroundColor="#EBEBFF"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="@color/dark_orange"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/layoutMonth"
+        app:layout_constraintTop_toBottomOf="@id/layoutNumber"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCardYear"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutMonth"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="18dp"
+        android:hint="Month"
+        android:layout_marginStart="8dp"
+        app:boxBackgroundColor="#EBEBFF"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="@color/dark_orange"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintStart_toEndOf="@id/layoutYear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutNumber"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCardMonth"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutCVV"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="18dp"
+        android:hint="CVV"
+        app:boxBackgroundColor="#EBEBFF"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="@color/dark_orange"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="@id/layoutYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutYear"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCardCVV"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnProced"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:textSize="18sp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/fajala"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/layoutCVV"
+        android:text="Proceed"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

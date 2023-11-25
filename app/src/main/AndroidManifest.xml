@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EatWell"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.reserve.ReservationsActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".utils.notification.FirebaseService"
+            android:exported="false"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/baseline_order_24" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/green" />
+
+        <activity
+            android:name=".view.reserve.ReserveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.reward.RewardsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.checkout.CheckoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.address.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.splash.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.cart.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.details.ProductDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.products.ProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.main.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.register.WelcomeActivity"
+            android:exported="true" />
+        <activity android:name=".view.reward.points.PointsActivity" />
+        <activity android:name=".view.reward.points.pointrequest.RequestPointsActivity" />
+        <activity android:name=".view.reward.subscribe.SubscribeActivity" />
+    </application>
+
+</manifest>

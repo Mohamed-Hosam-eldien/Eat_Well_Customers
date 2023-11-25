@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgReserve"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:src="@drawable/in_review"
+            android:padding="16sp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/txtReserveState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In-Review"
+            app:layout_constraintTop_toBottomOf="@id/imgReserve"
+            app:layout_constraintStart_toStartOf="@id/imgReserve"
+            app:layout_constraintEnd_toEndOf="@id/imgReserve"/>
+
+        <TextView
+            android:id="@+id/txtTableNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table Num 12"
+            android:visibility="gone"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtReserveState"
+            app:layout_constraintStart_toStartOf="@+id/txtReserveState"
+            app:layout_constraintEnd_toEndOf="@+id/txtReserveState"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/txtId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1695714754616"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@id/imgReserve"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtChairNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chair Number : 4"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtId"
+            app:layout_constraintStart_toEndOf="@id/imgReserve"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date : 12/2/2023"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtChairNumber"
+            app:layout_constraintStart_toEndOf="@id/imgReserve"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From  12:00  To  01:00"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtDate"
+            app:layout_constraintStart_toEndOf="@id/imgReserve"
+            android:layout_marginStart="8dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

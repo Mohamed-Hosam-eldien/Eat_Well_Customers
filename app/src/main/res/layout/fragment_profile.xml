@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notRegisterLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/fajala"
+            android:textSize="24sp"
+            android:text="Sign up to show \n your own profile page"/>
+
+        <ImageView
+            android:layout_width="340dp"
+            android:layout_height="300dp"
+            android:src="@drawable/no_user_found"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btnSign"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Sign Up"
+            android:layout_margin="16sp"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:visibility="visible"
+        tools:context=".view.profile.ProfileFragment">
+
+        <ImageView
+            android:id="@+id/profileImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/person"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/txtProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/profileImg"
+            app:layout_constraintStart_toEndOf="@id/profileImg"
+            android:textSize="16sp"
+            android:text="mohamed hosam"
+            android:layout_marginTop="16sp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtProfileEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtProfileName"
+            app:layout_constraintStart_toEndOf="@id/profileImg"
+            android:textSize="16sp"
+            android:text="mohamed.hosam@hamo.com"
+            android:layout_marginTop="4sp"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/txtProfilePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtProfileEmail"
+            app:layout_constraintStart_toEndOf="@id/profileImg"
+            android:textSize="16sp"
+            android:text="0123456789"
+            android:layout_marginTop="4sp"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/txtProfilePoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            app:layout_constraintTop_toBottomOf="@id/txtProfilePhone"
+            app:layout_constraintStart_toEndOf="@id/profileImg"
+            android:textSize="16sp"
+            android:layout_marginTop="4sp"
+            android:layout_marginStart="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAddress"
+            android:layout_marginTop="36sp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#ff9"
+            app:layout_constraintTop_toBottomOf="@id/profileImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:text="Address" />
+
+                <ImageView
+                    android:src="@drawable/baseline_arrow_forward_ios_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSignOut"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#FF9999"
+            app:layout_constraintTop_toBottomOf="@id/cardAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:text="Logout" />
+
+                <ImageView
+                    android:src="@drawable/baseline_arrow_forward_ios_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
